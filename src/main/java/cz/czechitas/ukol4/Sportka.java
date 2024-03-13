@@ -1,6 +1,7 @@
 package cz.czechitas.ukol4;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
@@ -12,6 +13,7 @@ public class Sportka {
 
     public Sportka() {
         //TODO naplnit osudí čísly 1 až 49.
+        osudi.add(1 - 49);
     }
 
     /**
@@ -21,6 +23,10 @@ public class Sportka {
      */
     public void zamichej() {
         //TODO zamíchat osudí
+        Collections.shuffle(osudi);
+        System.out.print(osudi);
+
+
     }
 
     /**
@@ -31,7 +37,9 @@ public class Sportka {
      */
     public List<Integer> dejVylosovanaCisla() {
         //TODO Vrátit seznam prvních 6 čísel z osudí.
-        return null;
+        return List.of(0, 1, 2, 3, 4, 5);
+//        System.out.print(dejVylosovanaCisla());
+
     }
 
     /**
@@ -41,6 +49,7 @@ public class Sportka {
      */
     public Integer dejDodatkoveCislo() {
         //TODO Vrátit sedmé číslo z osudí.
-        return null;
+//       System.out.print(dejDodatkoveCislo());
+       return osudi.get(6);
     }
 }
